@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+  }
+  .container1{
+    height: 100vh;
+    width:100%;
+    background-image: url(https://cdn.discordapp.com/attachments/764006962370445352/1123164605934489720/161122_1.jpg);
+    background-size: cover;
+    background-position: center;
+    position:relative;
+  }
+  .logo {
+    width:80px;
+    cursor:pointer;
+  }
+  .navbar {
+    overflow:hidden;
+    width:88%;
+    margin:auto;
+    padding:15 px 0;
+    display:flex;
+    align-items:center;
+    justify-content: space-between; 
+  }
+  .navbar ul li {
+    list-style: none;
+    display:inline-block;
+    margin: 15px 15px;
+  }
+  .navbar ul li a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 15px;
+  }
+  
+*/
+
+@gray-darker:               #444444;
+@gray-dark:                 #696969;
+@gray:                      #999999;
+@gray-light:                #cccccc;
+@gray-lighter:              #ececec;
+@gray-lightest:             lighten(@gray-lighter,4%);
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #be843ec3;
+}
+
+body {
+  
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid @gray-light;
+  //border-radius: 1rem;
+  color: @gray-dark;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
+}
+
+.card__image--flowers {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuh69DVoffQlxqrlqmhe46HnrEtFQU_9OPi0vHl008xg&s);
+}
+
+.card__image--river {
+  background-image: url(https://edtimes.in/wp-content/uploads/2016/02/Gone-Girl.jpg);
+}
+
+.card__image--record {
+  background-image: url(https://i0.wp.com/www.raptisrarebooks.com/images/49238/the-hunger-games-catching-fire-and-mockingjay-suzanne-collins-first-edition-signed.jpg?fit=1000%2C800&ssl=1);
+}
+
+.card__image--fence {
+  background-image: url(https://drsw10gc90t0z.cloudfront.net/AcuCustom/Sitename/DAM/455/The_Da_Vinci_Code__Shutterstock.jpg);
+}
+.card__image--mockingbird {
+  background-image: url(https://facts.net/wp-content/uploads/2023/09/20-captivating-facts-about-to-kill-a-mockingbird-harper-lee-1695631060.jpg);
+
+}
+.card__image--harry {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/5bd0d577755be21b6c237d35/1579228743887-MOH288VFBCOW1AQEQOX1/20200116_203540.jpg);
+
+}
+
+
+.card__title {
+  color: @gray-dark;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+

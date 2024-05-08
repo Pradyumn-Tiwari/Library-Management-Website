@@ -1,0 +1,103 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+.container1{
+  height: 100vh;
+  width:100%;
+  background-image: url(https://cdn.discordapp.com/attachments/764006962370445352/1231149646907310100/image.png?ex=6635e875&is=66237375&hm=6def03f37a4adf58e975163245eeb563fcfd7cb8d79c5c054c9bb33ad5e4334e&);
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  
+}
+.logo {
+  width:80px;
+  cursor:pointer;
+}
+.navbar {
+  overflow:hidden;
+  width:88%;
+  margin:auto;
+  padding:15 px 0;
+  display:flex;
+  align-items:center;
+  justify-content: space-between; 
+}
+.navbar ul li {
+  list-style: none;
+  display:inline-block;
+  margin: 15px 15px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color:#ffffff;
+  /* font-srgb(255, 255, 255)px; */
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+.content {
+  width:100%;
+  position:absolute;
+  top:30%;
+}
+.left-col{
+  margin-left: 6%;
+}
+.left-col h1{
+  font-size:90px;
+  color:#ffffff;
+  line-height: 110px;
+  float: left;
+  text-shadow: 2px 2px 4px #000000;
+}
+.right-col {
+  float:right;
+  margin-right:6%;
+  margin-top:120px;
+  display:flex;
+  align-items:center;
+}
+.right-col p{
+  font-size:18px;
+  color:#ffffff;
+  font-weight:400;
+  margin-right: 15px;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+#icon {
+  width:80px;
+  cursor:pointer;
+}
+.panel {
+  height:auto;
+  background-color:rgb(188,224,220);
+  background-image: url(https://cdn.discordapp.com/attachments/764006962370445352/1098287528584429649/Untitled_design_3.jpg);
+  background-size: cover;
+  background-position: center;
+  position:relative; 
+  height: 100vh;
+  width: 100%;
+}
+h2 {
+  font-size:90px;
+  color:#ffffff;
+  line-height: 110px;
+  float: left;
+  margin:6%;
+}
+
+.right-col :hover{
+  background-color: #ececec;
+  color: white;
+}
+
